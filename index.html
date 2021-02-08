@@ -1,0 +1,38 @@
+<!-- UserName Validation.
+Not Empty.
+Length will be greater and equal three and smalles and equal to 20. -->
+
+<html>  
+<head>
+	<title>TextBox Validation</title>
+</head>
+<body>
+
+	<form onsubmit="return myFun()">
+		username: <input type="text" id="User_Name" value="">
+		<span id="Message"></span>
+		<br><br>
+      	<input type="submit" value="Submit">
+	</form>
+
+	<script>
+		function myFun(){
+			var a = document.getElementById("User_Name").value;
+
+			if(a==""){
+				document.getElementById("Message").innerHTML="**Please Enter Your Name**";
+			}
+			if(a.Length<3){
+				document.getElementById("Message").innerHTML="Please Enter Name With Atleast 3 Character";
+				return false;
+			}
+			if(a.Length>20){
+			document.getElementById("Message").innerHTML="Please Enter Name with Less than 20 Character";
+			return false;
+		}
+
+	</script>
+
+</body>
+
+</html>
